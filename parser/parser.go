@@ -7,15 +7,15 @@ import (
 )
 
 type Link struct {
-	url  string
-	text string
+	Url  string
+	Text string
 }
 
 var Iterations = 0
 var linkList = make([]*Link, 0)
 
 func (l *Link) String() string {
-	return "{\n" + l.url + "\n" + l.text + "\n}"
+	return "{\n" + l.Url + "\n" + l.Text + "\n}"
 }
 
 func NewLink(url string, text string) *Link {
