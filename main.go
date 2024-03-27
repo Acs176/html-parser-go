@@ -1,12 +1,13 @@
 package main
 
 import (
-	"adri/parser/parser"
 	_ "embed"
 	"flag"
 	"fmt"
 	"os"
 	"strings"
+
+	"github.com/adri/parser/parser"
 
 	"golang.org/x/net/html"
 )
