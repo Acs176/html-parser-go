@@ -1,4 +1,4 @@
-module github.com/adri/parser
+module github.com/Acs176/parser
 
 go 1.21.6
 

@@ -7,7 +7,7 @@ import (
 	"os"
 	"strings"
 
-	"github.com/adri/parser/parser"
+	"github.com/Acs176/parser/parser"
 
 	"golang.org/x/net/html"
 )
