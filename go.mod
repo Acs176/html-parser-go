@@ -1,4 +1,4 @@
-module github.com/Acs176/parser
+module github.com/Acs176/html-parser-go
 
 go 1.21.6
 
