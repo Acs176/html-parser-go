@@ -39,7 +39,8 @@ func ParseHtml(n *html.Node) []*Link {
 	Iterations++
 
 	if n.Type == html.ElementNode && n.Data == "a" {
-		var link = NewLink(n.Attr[0].Val, parseAnchor(n))
+		href := extractHref(n)
+		var link = NewLink(href, parseAnchor(n))
 		linkList = append(linkList, link)
 	}
 	for c := n.FirstChild; c != nil; c = c.NextSibling {
@@ -47,4 +48,14 @@ func ParseHtml(n *html.Node) []*Link {
 	}
 
 	return linkList
+}
+
+func extractHref(n *html.Node) string {
+	href := ""
+	for _, attr := range n.Attr {
+		if attr.Key == "href" {
+			href = attr.Val
+		}
+	}
+	return href
 }

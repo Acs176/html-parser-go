@@ -12,11 +12,12 @@ import (
 )
 
 var validFileNames = map[string]bool{
-	"ex1": true,
-	"ex2": true,
-	"ex3": true,
-	"ex4": true,
-	"ex5": true,
+	"ex1":      true,
+	"ex2":      true,
+	"ex3":      true,
+	"ex4":      true,
+	"ex5":      true,
+	"realPage": true,
 }
 
 func main() {

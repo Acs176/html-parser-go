@@ -1,0 +1,632 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="generator" content="Hugo 0.58.3" />
+
+
+
+    <meta charset="utf-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta name="description" content="...">
+    <meta name="keywords" content="learn golang go gopher coding">
+    <meta name="author" content="Jon Calhoun">
+
+
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png?v=00QO5d6276">
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png?v=00QO5d6276">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png?v=00QO5d6276">
+    <link rel="manifest" href="/manifest.json?v=00QO5d6276">
+    <link rel="mask-icon" href="/safari-pinned-tab.svg?v=00QO5d6276" color="#38c172">
+    <link rel="shortcut icon" href="/favicon.ico?v=00QO5d6276">
+    <meta name="apple-mobile-web-app-title" content="Calhoun.io">
+    <meta name="application-name" content="Calhoun.io">
+    <meta name="theme-color" content="#38c172">
+
+
+
+    <meta content="https://www.calhoun.io/img/social_share.png" property="og:image">
+    <meta content="Calhoun.io - Go for Everyone" property="og:title">
+    <meta content="article" property="og:type">
+    <meta content="https://www.calhoun.io" property="og:url">
+    <meta content="Calhoun.io" property="og:site_name">
+    <meta content="..." property="og:description">
+
+
+    <meta name="twitter:card" content="photo">
+    <meta name="twitter:site" content="@joncalhoun">
+    <meta name="twitter:creator" content="@joncalhoun">
+    <meta name="twitter:title" content="Calhoun.io - Go for Everyone">
+    <meta name="twitter:description" content="...">
+    <meta name="twitter:image" content="https://www.calhoun.io/img/social_share.png">
+    <meta name="twitter:url" content="https://www.calhoun.io/">
+
+
+    <meta charset="utf-8">
+    <title>Calhoun.io - Go for Everyone</title>
+
+    <link rel="alternate" type="application/rss&#43;xml" href="https://www.calhoun.io/rss/index.xml">
+
+
+
+
+
+
+    <link href="https://fonts.googleapis.com/css?family=Lusitana|Reenie+Beanie" rel="stylesheet">
+
+    <link rel="stylesheet" type="text/css" href="/css/styles.css" />
+
+
+
+    <link rel="alternate" type="application/rss&#43;xml" href="https://www.calhoun.io/rss/index.xml"
+        title="Calhoun.io - Go for Everyone">
+
+
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-4TPKD3D9N2"></script>
+    <script>
+        window.dataLayer = window.dataLayer || [];
+        function gtag() { dataLayer.push(arguments); }
+        gtag('js', new Date());
+
+        gtag('config', 'G-4TPKD3D9N2');
+    </script>
+
+
+    <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+
+</head>
+
+<body class="bg-grey-lighter">
+    <nav class="flex items-center justify-between bg-green p-0">
+        <div class="flex container  py-4 mx-auto border-none">
+            <div class="flex flex-no-shrink justify-start items-center text-white brand pr-4 px-6 sm:px-0">
+                <img class="mr-2 pb-2" src="/img/avatar.png" style="max-width: 40px;">
+                <a class="font-mono font-semibold text-3xl text-white hover:text-white" href="/">
+                    Calhoun.io
+                </a>
+            </div>
+            <div class="hidden sm:flex sm:flex-grow md:hidden"></div>
+            <div class="hidden md:flex md:flex-grow text-md items-center pl-6">
+                <a href="/" class="text-green-lightest hover:text-white mr-4">
+                    Recent & Popular Articles
+                </a>
+
+            </div>
+            <div class="hidden sm:flex sm:flex-initial text-red items-center mr-4">
+                <a href="/courses" class="text-green-lightest hover:text-white">Explore my Go Courses</a>
+            </div>
+            <div class="hidden sm:flex sm:flex-initial text-red items-center">
+                <a href="https://courses.calhoun.io/signin"
+                    class="text-md px-4 py-2 rounded text-green-lightest no-underline bg-green hover:border-transparent hover:bg-green-dark hover:text-white">Course
+                    Login</a>
+            </div>
+        </div>
+    </nav>
+
+
+    <div class="container mx-auto border-none pt-4">
+        <div class="bg-pink-lightest border-t-4 border-pink rounded-b text-pink-darkest px-4 py-3 shadow-md"
+            role="alert">
+            <div class="flex">
+                <div class="py-1">
+
+
+                </div>
+                <div class="flex-grow px-0">
+                    <p class="font-bold px-1 py-1">Go Courses Sale!</p>
+                    <p class="text-sm px-1 py-2">
+                        My courses, <a style="text-decoration: none; border-bottom: 1px dotted;"
+                            href="https://www.usegolang.com/">Web Development with Go</a> and <a
+                            style="text-decoration: none; border-bottom: 1px dotted;"
+                            href="https://testwithgo.com/">Test with Go</a>, are on sale until Fri, April 5. <b>Save up
+                            to 40%</b> on each course during the sale. Both courses have lifetime access, a 30-day money
+                        back guarantee, and free updates.
+                    </p>
+
+
+                    <p class="text-sm px-1 py-1 italic">
+                        Thank you for your continued support and happy coding!
+                    </p>
+                    <p class="text-2xl px-2 py-1" style="font-family: 'Reenie Beanie', cursive;">
+                        Jon Calhoun
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="block lg:flex lg:flew-wrap items-center container mx-auto border-none px-6 sm:px-0">
+        <div class="flex flex-wrap w-full md:w-auto py-6">
+            <div class="flex flex-initial">
+                <a class="text-yellow-darker hover:text-yellow-darkest bg-yellow-lighter p-2"
+                    href="https://www.usegolang.com">Learn Web Development with Go</a>
+            </div>
+            <div class="flex flex-initial">
+                <a class="text-grey-darker hover:text-grey-darkest p-2" href="https://gophercises.com">Practice Go with
+                    Gophercises</a>
+            </div>
+        </div>
+
+
+
+
+    </div>
+
+
+    <div class="container mx-auto mb-8 lg:flex">
+        <div class="w-full lg:w-3/5 bg-white shadow-md rounded lg:mr-8 pb-8">
+            <h1 class="py-6 border-b-2 border-grey-lighter text-grey-darker font-headline">
+                Recent Articles
+            </h1>
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/building-a-blog-part-1/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">Building a
+                                Blog in Go: Rendering Raw Markdown</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">The first step I took when building my Go blog was to
+                        setup a simple HTTP server that can return the slug of the blog. This is a unique identifier for
+                        the blog that is a bit more url-friendly. From there I worked on the code necessary to read
+                        files from the local disk and started rendering the raw markdown to the HTTP handler in
+                        preparation for the next part of this series where I will start rendering the markdown in proper
+                        HTML.</p>
+                </div>
+            </div>
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/building-a-blog-exercise/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">Building a
+                                Blog Exercise</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">In this series we work through building a blog in Go. The
+                        first article helps set the scene by explaining what we are going to build, what to expect from
+                        the series, and provides some suggestions on how to break down the problem and proceed if you
+                        want to try coding it on your own first.</p>
+                </div>
+            </div>
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/does-range-copy-the-slice-in-go/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">Does
+                                Go&#39;s range Copy a Slice Before Iterating Over It?</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">This week someone in my Go courses Slack asked why their
+                        for loop wasn&rsquo;t working the way they expected. More specifically, they were wondering if
+                        Go&rsquo;s range keyword was copying their slice before iterating over it.
+                        I won&rsquo;t use the exact same code here, but we can look at a similar example by trying to
+                        generate the Fibonacci sequence.
+                        If you don&rsquo;t know what the Fibonacci sequence is, don&rsquo;t worry.</p>
+                </div>
+            </div>
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/go-servemux-vs-chi/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">Go&#39;s
+                                1.22&#43; ServeMux vs Chi Router</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">In Go 1.22 the ServeMux was updated to be significantly
+                        easier to use for building web applications. Supported was added for HTTP methods, variables in
+                        URL paths, and more. In this article we discuss how it stacks up to some third party libraries
+                        that have existed in the Go ecosystemf or a while.</p>
+                </div>
+            </div>
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/what-does-the-tilde-mean-in-go-generics/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">What Does
+                                the Tilde Mean in Go Generics</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">Go&#39;s generics use the tilde (~) character to
+                        represent types that have a specific underlying type. In this article we explore that in a bit
+                        more depth, looking at examples of where this can be useful to make generic functions even more
+                        powerful.</p>
+                </div>
+            </div>
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/crash-course-on-go-generics/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">Crash
+                                Course on Go Generics</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">Generics provide a way to write type-safe code in a
+                        statically typed language like Go. In this article we explore how generics work, use cases for
+                        using generics, and some common misconceptions that beginners to generics may have.</p>
+                </div>
+            </div>
+
+
+            <div class="w-full text-center py-4 pt-8">
+                <div class="inline-flex">
+                    <a
+                        class="no-underline bg-grey-light hover:bg-grey text-grey-darker font-bold py-2 px-4 rounded-l text-grey-light hover:text-grey-light bg-grey-lightest hover:bg-grey-lightest inactive cursor-not-allowed">
+                        ← Prev Page
+                    </a>
+                    <a href="/page/2/"
+                        class="no-underline bg-grey-light hover:bg-grey text-grey-darker font-bold py-2 px-4 rounded-r  ">
+                        Next Page →
+                    </a>
+                </div>
+            </div>
+        </div>
+        <div class="w-full lg:w-2/5 rounded py-8 lg:py-0">
+            <h1 class="py-6 text-grey-darker font-headline">
+                Popular Articles
+            </h1>
+
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/6-tips-for-using-strings-in-go/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">6 Tips for
+                                Using Strings in Go</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">Learn how to perform common operations with strings in
+                        Go. This article discusses how to write multiline strings, concatenate strings efficiently,
+                        convert various data types into strings, checking for prefixes, and converting strings to byte
+                        slices.</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/intro-to-templates-p3-functions/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">Using
+                                Functions Inside Go Templates</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">Go&#39;s template package provides many useful built-in
+                        functions. Learn to use a few of the more common ones, as well as how to add custom fucntions to
+                        your templates so that you can add any functionality you need.</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/connecting-to-a-postgresql-database-with-gos-database-sql-package/"
+                        class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">Connecting
+                                to a PostgreSQL database with Go&#39;s database/sql package</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">This tutorial explains how to connect to a Postgres DB
+                        using the database/sql and lib/pq packages. It also covers potential errors and solutions.</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/creating-random-strings-in-go/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">Creating
+                                Random Strings in Go</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">A tutorial explaining how to create a custom rand package
+                        with functions for creating random strings of varying length with custom of preset character
+                        sets.</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/inserting-records-into-a-postgresql-database-with-gos-database-sql-package/"
+                        class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">Inserting
+                                records into a PostgreSQL database with Go&#39;s database/sql package</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">Learn to insert new records into a Postgres database
+                        using Go&#39;s database/sql package, along with how to get the resulting ID of newly created
+                        records.</p>
+                </div>
+            </div>
+
+
+
+
+            <div class="block pt-6 pb-0">
+                <div class="mb-2 px-6">
+                    <a href="https://www.calhoun.io/how-to-use-slice-capacity-and-length-in-go/" class="no-underline">
+                        <div class="flex items-center">
+                            <div class="text-grey-darkest hover:text-black hover:underline lusitana text-2xl">How to use
+                                slice capacity and length in Go</div>
+                            <div class="flex-grow"></div>
+
+                        </div>
+
+                    </a>
+                    <p class="text-grey-darker text-base px-0">Learn about the difference between capacity and length
+                        and how to properly utilize them to make your Go code faster, cleaner, and memory efficient.</p>
+                </div>
+            </div>
+
+
+
+        </div>
+    </div>
+
+    <div class="container py-8 mx-auto">
+        <h2 class="pt-4 font-headline text-blue-darker opacity-75">
+            My Latest Progress Update
+        </h2>
+
+        <div class="block pt-4 pb-4">
+            <div class="mb-2 px-6">
+                <a href="https://www.calhoun.io/progress/writing-course-notes/" class="no-underline">
+                    <div class="text-grey-darker hover:text-black hover:underline lusitana text-2xl">Writing Course
+                        Notes</div>
+                </a>
+                <p class="text-grey-dark text-base px-0">In this progress update we explore why it takes me so long to
+                    complete a project when using it to come up with course notes. I&#39;ll also give you an inside look
+                    at my notes that I use for courses.</p>
+                <a href="/progress/" class="text-grey-dark">
+                    <p class="text-grey-dark text-base px-0 hover:text-black hover:underline">View past progress updates
+                    </p>
+                </a>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="bg-grey-light text-center py-4 my-0 mb-8 lg:mb-0">
+        <div class="p-2 items-center justify-middle">
+            <p class="font-semibold">
+                ↓ Or check out some of my longer series. ↓
+            </p>
+            <p>
+                Each series covers a broader topic and is composed of several articles
+            </p>
+        </div>
+    </div>
+    <div class="container mx-auto lg:flex lg:pt-0">
+        <div class="w-full lg:w-1/2 bg-white shadow-md rounded lg:mr-8 pb-8 my-8">
+            <a href="/using-postgresql-with-go" class="no-underline">
+                <img src="/img/using_postgresql_with_go.png">
+            </a>
+            <div class="px-6">
+                <a href="/using-postgresql-with-go" class="no-underline">
+                    <div class="text-grey-darkest hover:text-black hover:underline text-3xl pb-2">Using PostgreSQL with
+                        Go</div>
+                </a>
+                <div class="text-grey-darker text-base">
+                    <p class="px-0">
+                        PostgreSQL is an open source relational database system that has been around for well over a
+                        decade and has proven to be a great all around storage choice when developing a web application.
+                    </p>
+                    <p class="px-0">
+                        In this series we are going to walk through everything from first installing PostgreSQL 9.5 all
+                        the way to using it with a Go application. While this post will cover all of the basics required
+                        to get started using SQL with Golang, it is not a full course on SQL. It is instead intended to
+                        guide you by giving you enough information to be productive, while not overloading you with
+                        details that can be learned as you progress.
+                    </p>
+                    <p class="px-0">
+                        In this series we will cover topics like:
+                    </p>
+                    <ul>
+                        <li class="py-2">Installing PostgreSQL on various operating systems (Ubuntu Linux, Mac OS, etc)
+                        </li>
+                        <li class="py-2">Interacting with a PostgreSQL database using raw SQL. This includes querying,
+                            inserting, updating, and deleting records.</li>
+                        <li class="py-2">Interacting with a PostgreSQL database using the <code>database/sql</code>
+                            package provided by Go's standard library. Again, this includes querying, inserting,
+                            updating, and deleting records.</li>
+                        <li class="py-2">Using ORMs and other third party librarys to interact with SQL databases</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="text-center py-4 lg:px-4">
+                <a href="/using-postgresql-with-go" class="no-underline">
+                    <div class="p-2 bg-purple-dark items-center text-purple-lightest hover:text-white leading-none lg:rounded-full flex lg:inline-flex"
+                        role="alert">
+                        <span class="font-semibold mx-6 text-left flex-auto">It's SQL Time</span>
+                        <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+        <div class="w-full lg:w-1/2 bg-white shadow-md rounded pb-8 my-8">
+            <a href="/lets-learn-algorithms" class="no-underline">
+                <img src="  /img/lets_learn_algorithms.png">
+            </a>
+            <div class="px-4">
+                <a href="/lets-learn-algorithms" class="no-underline">
+                    <div class="text-grey-darkest hover:text-black hover:underline text-3xl pb-2 px-2">Let's Learn
+                        Algorithms</div>
+                </a>
+                <div class="text-grey-darker text-base">
+                    <p class="px-2 bg-yellow-lighter italic">
+                        This series is no longer being updated. Instead, check out the course I created based on it - <a
+                            href="https://algorithmswithgo.com">Algorithms with Go</a>
+                    </p>
+                    <p class="px-2">
+                        Algorithms are a core component in a computer science education, and when taught properly they
+                        can help a developer improve his or her skills massively. In this series we will work to both
+                        understand how common computer algorithms work, as well as how to properly code each of them in
+                        Go.
+                    </p>
+                    <p class="px-2">
+                        By coding each algorithm as we learn it, you will develop the skills necessary to translate a
+                        conceptual idea into correct and efficient code. While many developers will know how to solve a
+                        problem set before them, oftentimes bugs and issues can stem from minor mistakes that algorithm
+                        practice can help remedy.
+                    </p>
+                    <p class="px-2">
+                        In addition to coding each algorithm we will also discuss how it works as well as the efficiency
+                        of each algorithm. That is, we will discuss how fast or slow the code will be based on the size
+                        of the input. This is important because in many real world situations you can opt for simpler -
+                        but slower - code if you know your inputs won't be too large. Alternatively, you could determine
+                        that the simpler solution won't work for your inputs and know that you will need to spend some
+                        extra time on a more efficient algorithm.
+                    </p>
+                    <p class="px-0">
+                        If you are relatively new to programmer, or simply don't have a formal computer science
+                        education, I invite you to check out these articles. You won't be disappointed!
+                    </p>
+                </div>
+            </div>
+            <div class="text-center py-4 lg:px-4">
+                <a href="/lets-learn-algorithms" class="no-underline">
+                    <div class="p-2 bg-orange-dark items-center text-orange-lightest hover:text-white leading-none lg:rounded-full flex lg:inline-flex"
+                        role="alert">
+                        <span class="font-semibold mx-6 text-left flex-auto">Let's Learn Algorithms</span>
+                        <svg class="fill-current opacity-75 h-4 w-4" xmlns="http://www.w3.org/2000/svg"
+                            viewBox="0 0 20 20">
+                            <path
+                                d="M12.95 10.707l.707-.707L8 4.343 6.586 5.757 10.828 10l-4.242 4.243L8 15.657l4.95-4.95z" />
+                        </svg>
+                    </div>
+                </a>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="py-8"></div>
+    <div class="container mx-auto border-none py-0 lg:flex" id="about">
+        <div class="block w-full lg:flex ">
+            <div class="h-48 lg:h-auto lg:w-48 flex-none bg-cover rounded-t lg:rounded-t-none lg:rounded-l text-center overflow-hidden"
+                style="background-image: url('/img/truck_sm.jpg')" title="Green forested area">
+            </div>
+            <div
+                class="border-r border-b border-l border-grey-light lg:border-l-0 lg:border-t lg:border-grey-light bg-white rounded-b lg:rounded-b-none lg:rounded-r p-4 flex flex-col justify-between leading-normal">
+                <div class="mb-2">
+                    <div class="mb-2 items-center px-6 flex">
+                        <img class="w-16 h-16 rounded-full mr-4"
+                            src="//www.gravatar.com/avatar/7f6933474b11029553700ca296b0cd48?s=150&d=mm&r=x"
+                            alt="Avatar of Jon Calhoun">
+                        <div>
+
+                            <div class="text-xs text-grey-dark">Articles and Tutorials by</div>
+
+
+                            <div class="text-grey-darkest font-bold text-xl">Jon Calhoun</div>
+                            <div class="flex">
+                                <a class="twitter-follow-button" href="https://twitter.com/joncalhoun"
+                                    data-size="small">
+                                    Follow @joncalhoun</a>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="text-grey-darker text-base">
+                        <p class="py-1">
+                            Jon Calhoun is a full stack web developer who teaches about Go, web development, algorithms,
+                            and anything programming. If you haven't already, you should totally check out his <a
+                                href="https://www.calhoun.io/courses">Go courses</a>.
+                        </p>
+                        <p class="py-1">
+                            Previously, Jon worked at several statups including co-founding EasyPost, a shipping API
+                            used by several fortune 500 companies. Prior to that Jon worked at Google, competed at world
+                            finals in programming competitions, and has been programming since he was a child.
+                        </p>
+                    </div>
+                    <div class="text-grey-dark text-base pt-8">
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </div>
+
+    <div class="container mx-auto mt-8 pt-8 flex flex-wrap justify-center">
+        <a href="/" class="leading-loose mx-6 text-grey-dark hover:text-grey-darkest">Recent Articles</a>
+        <a href="/post/" class="leading-loose mx-6 text-grey-dark hover:text-grey-darkest">All Articles</a>
+        <a href="/series" class="leading-loose mx-6 text-grey-dark hover:text-grey-darkest">Mini-Series</a>
+        <a href="/progress/" class="leading-loose mx-6 text-grey-dark hover:text-grey-darkest">Progress Updates</a>
+        <a href="/tags/" class="leading-loose mx-6 text-grey-dark hover:text-grey-darkest">Tags</a>
+        <a href="/about" class="leading-loose mx-6 text-grey-dark hover:text-grey-darkest">About Me</a>
+        <a href="/courses" class="leading-loose mx-6 text-grey-dark hover:text-grey-darkest">Go Courses</a>
+    </div>
+    <p class="pb-8 text-center text-grey text-xs my-8">
+        ©2018 Jonathan Calhoun. All rights reserved.
+    </p>
+    <div class="py-6"></div>
+
+
+
+
+</body>
+
+</html>
